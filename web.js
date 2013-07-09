@@ -8,7 +8,7 @@ app.get('/', function(request, response)
   var index = fs.readFileSync('./index.html', 'utf-8');
   var indexBuffer = new Buffer(index);
 
-  response.send(indexBuffer.toString("utf-8", 1, 28));
+  response.send(indexBuffer.toString("utf-8"));
 });
 
 var port = process.env.PORT || 5000;
